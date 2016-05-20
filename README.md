@@ -11,11 +11,16 @@ Swagger 2.0 for Lumen 5
 
 This package is a wrapper of [Swagger-php](https://github.com/zircote/swagger-php) and [swagger-ui](https://github.com/swagger-api/swagger-ui) adapted to work with Lumen 5.
 
+
+Original source
+============
+https://github.com/DarkaOnLine/SwaggerLume
+
 Installation
 ============
 
 ```php
-    composer require "darkaonline/swagger-lume 1.*"
+    composer require "haotx/swagger-lume 1.*"
 ```
 
 
