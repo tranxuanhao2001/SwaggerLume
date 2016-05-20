@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{{config('swagger-lume.api.title')}}</title>
-    <link rel="icon" type="image/png" href="{{config('swagger-lume.paths.assets_public')}}/images/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{config('swagger-lume.paths.assets_public')}}/images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="{{config('swagger-lume.paths.assets_public')}}/image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="{{config('swagger-lume.paths.assets_public')}}/image/png" href="images/favicon-16x16.png" sizes="16x16" />
     <link href='{{config('swagger-lume.paths.assets_public')}}/css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
     <link href='{{config('swagger-lume.paths.assets_public')}}/css/reset.css' media='screen' rel='stylesheet' type='text/css'/>
     <link href='{{config('swagger-lume.paths.assets_public')}}/css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
@@ -45,17 +45,17 @@
                 highlightSizeThreshold: 5000
             });
 
-			// Pre load translate...
-			if(window.SwaggerTranslator) {
-				window.SwaggerTranslator.translate();
-			}
+            // Pre load translate...
+            if(window.SwaggerTranslator) {
+                window.SwaggerTranslator.translate();
+            }
             window.swaggerUi = new SwaggerUi({
                 url: url,
                 dom_id: "swagger-ui-container",
                 @if(array_key_exists('validatorUrl', get_defined_vars()))
-                // This differentiates between a null value and an undefined variable
-                validatorUrl: {!! isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' !!},
-                @endif
+				// This differentiates between a null value and an undefined variable
+				validatorUrl: {!! isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' !!},
+				@endif
                 supportedSubmitMethods: ['get', 'post', 'put', 'delete', 'patch'],
                 onComplete: function(swaggerApi, swaggerUi){
 					@if(isset($requestHeaders))
@@ -66,14 +66,14 @@
 		  
                     if(typeof initOAuth == "function") {
                         initOAuth({
-                            clientId: "your-client-id",
-                            clientSecret: "your-client-secret-if-required",
+                            clientId: "id-for-test-123",
+                            clientSecret: "1",
                             realm: "your-realms",
                             appName: "your-app-name",
                             scopeSeparator: ",",
                             additionalQueryStringParams: {},
                         });
-                    }                    
+                    }
                 },
                 onFailure: function(data) {
                     log("Unable to Load SwaggerUI");
@@ -98,7 +98,7 @@
 <body class="swagger-section">
 <div id='header'>
     <div class="swagger-ui-wrap">
-        <a id="logo" href="http://swagger.io"><img class="logo__img" alt="swagger" height="30" width="30" src="images/logo_small.png" /><span class="logo__title">swagger</span></a>
+        <a id="logo" href=""><img class="logo__img" alt="swagger" height="30" width="30" src="images/logo_small.png" /><span class="logo__title">swagger</span></a>
         <form id='api_selector'>
             <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text"/></div>
             <div id='auth_container'></div>
