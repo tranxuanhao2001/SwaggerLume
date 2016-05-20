@@ -1,12 +1,12 @@
 {
-  "name": "darkaonline/swagger-lume",
+  "name": "haotx/swagger-lume",
   "description": "Swagger integration to Lumen 5",
   "keywords": ["lumen", "laravel", "swagger"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Darius Matulionis",
-      "email": "darius@matulionis.lt"
+      "name": "Tran Xuan Hao",
+      "email": "tranxuanhao2001@gmail.com"
     }
   ],
   "require": {    
