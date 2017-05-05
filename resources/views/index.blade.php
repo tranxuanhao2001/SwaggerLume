@@ -71,9 +71,16 @@
 <script src='{{config('swagger-lume.paths.assets_public')}}/swagger-ui-standalone-preset.js'> </script>
 <script>
     window.onload = function() {
+        var url = window.location.search.match(/url=([^&]+)/);
+        if (url && url.length > 1) {
+            url = decodeURIComponent(url[1]);
+        } else {
+            url = "{!! $urlToDocs !!}";
+        }
+
         // Build a system
         const ui = SwaggerUIBundle({
-            url: "http://petstore.swagger.io/v2/swagger.json",
+            url: url,
             dom_id: '#swagger-ui',
             presets: [
                 SwaggerUIBundle.presets.apis,
