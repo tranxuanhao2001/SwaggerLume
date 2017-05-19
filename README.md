@@ -51,6 +51,7 @@ Configuration
 - Run `swagger-lume:publish-config` to publish configs (`config/swagger-lume.php`)
 - Run `swagger-lume:publish-assets` to publish swagger-ui to your public folder (`public/vendor/swagger-lume`)
 - Run `swagger-lume:publish-views` to publish views (`resources/views/vendor/swagger-lume`)
+- Run `swagger-lume:publish-controller` to publish controller (`app/Http/Controllers/SwaggerController.php`)
 - Run `swagger-lume:publish` to publish everything
 - Run `swagger-lume:generate` to generate docs
 
