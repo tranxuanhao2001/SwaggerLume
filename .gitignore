@@ -7,3 +7,7 @@
 /vendor
 /logs
 /composer.lock
+.buildpath
+.project
+.settings
+
